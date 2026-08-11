@@ -125,11 +125,38 @@ Total anggaran operasional proyek sebesar **Rp4.975.000**, yang dialokasikan sec
 ## 👥 Kontributor Organisasi
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->
-<div align="center">
-  <a href="https://github.com/hicesse" style="text-decoration: none; display: inline-block; margin: 10px; text-align: center;"><img src="https://avatars.githubusercontent.com/u/192774936?v=4" width="65px" height="65px" style="border-radius: 50%; object-fit: cover;" alt="hicesse"/><br /><sub style="text-decoration: none;"><font color="#DF6C4F"><b>hicesse</b></font></sub></a>
-  <a href="https://github.com/widhi578" style="text-decoration: none; display: inline-block; margin: 10px; text-align: center;"><img src="https://avatars.githubusercontent.com/u/217446727?v=4" width="65px" height="65px" style="border-radius: 50%; object-fit: cover;" alt="widhi578"/><br /><sub style="text-decoration: none;"><font color="#DF6C4F"><b>widhi578</b></font></sub></a>
-  <a href="https://github.com/cannabisse" style="text-decoration: none; display: inline-block; margin: 10px; text-align: center;"><img src="https://avatars.githubusercontent.com/u/281621980?v=4" width="65px" height="65px" style="border-radius: 50%; object-fit: cover;" alt="cannabisse"/><br /><sub style="text-decoration: none;"><font color="#DF6C4F"><b>cannabisse</b></font></sub></a>
-  <a href="https://github.com/juansoetham" style="text-decoration: none; display: inline-block; margin: 10px; text-align: center;"><img src="https://avatars.githubusercontent.com/u/243265395?v=4" width="65px" height="65px" style="border-radius: 50%; object-fit: cover;" alt="juansoetham"/><br /><sub style="text-decoration: none;"><font color="#DF6C4F"><b>juansoetham</b></font></sub></a>
-  <a href="https://github.com/ikalvscode" style="text-decoration: none; display: inline-block; margin: 10px; text-align: center;"><img src="https://avatars.githubusercontent.com/u/244137051?v=4" width="65px" height="65px" style="border-radius: 50%; object-fit: cover;" alt="ikalvscode"/><br /><sub style="text-decoration: none;"><font color="#DF6C4F"><b>ikalvscode</b></font></sub></a>
-</div>
+<table>
+  <tr>
+    <td align="center" width="100">
+      <a href="https://github.com/hicesse">
+        <img src="https://wsrv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F192774936%3Fv%3D4&mask=circle&w=65&h=65" width="65" height="65" alt="hicesse" /><br />
+        <sub><font color="#DF6C4F"><b>hicesse</b></font></sub>
+      </a>
+    </td>
+    <td align="center" width="100">
+      <a href="https://github.com/widhi578">
+        <img src="https://wsrv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F217446727%3Fv%3D4&mask=circle&w=65&h=65" width="65" height="65" alt="widhi578" /><br />
+        <sub><font color="#DF6C4F"><b>widhi578</b></font></sub>
+      </a>
+    </td>
+    <td align="center" width="100">
+      <a href="https://github.com/cannabisse">
+        <img src="https://wsrv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F281621980%3Fv%3D4&mask=circle&w=65&h=65" width="65" height="65" alt="cannabisse" /><br />
+        <sub><font color="#DF6C4F"><b>cannabisse</b></font></sub>
+      </a>
+    </td>
+    <td align="center" width="100">
+      <a href="https://github.com/juansoetham">
+        <img src="https://wsrv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F243265395%3Fv%3D4&mask=circle&w=65&h=65" width="65" height="65" alt="juansoetham" /><br />
+        <sub><font color="#DF6C4F"><b>juansoetham</b></font></sub>
+      </a>
+    </td>
+    <td align="center" width="100">
+      <a href="https://github.com/ikalvscode">
+        <img src="https://wsrv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F244137051%3Fv%3D4&mask=circle&w=65&h=65" width="65" height="65" alt="ikalvscode" /><br />
+        <sub><font color="#DF6C4F"><b>ikalvscode</b></font></sub>
+      </a>
+    </td>
+  </tr>
+</table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
