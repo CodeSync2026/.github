@@ -121,7 +121,8 @@ Total anggaran operasional proyek sebesar **Rp4.975.000**, yang dialokasikan sec
 *CodeSync 2026 — Bridging Academia, Industry, and Vocational Excellence.*
 
 ## Lihat daftar seluruh tim dan kontributor di **[Organisasi GitHub CodeSync 2026](https://github.com/orgs/CodeSync2026/people)**.
+
 ## 👥 Kontributor Organisasi
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-LIST:START -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
