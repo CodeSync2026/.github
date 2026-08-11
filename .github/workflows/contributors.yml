@@ -1,4 +1,4 @@
-name: Update Org Contributors
+name: Update Contributors
 
 on:
   schedule:
@@ -47,10 +47,10 @@ jobs:
               }
             }
 
-            // 3. Format HTML Inline (Tanpa Elemen Tabel, Foto Bulat, Nama Bold #DF6C4F)
+            // 3. Format HTML Inline (Foto Bulat, Nama Bold #DF6C4F)
             let html = '\n<div align="center">\n';
-            for (const [login, user] of contributors.values()) {
-              html += `  <a href="${user.html_url}" style="text-decoration: none; display: inline-block; margin: 10px; text-align: center;"><img src="${user.avatar_url}" width="65px" height="65px" style="border-radius: 50%; object-fit: cover;" alt="${login}"/><br /><sub style="text-decoration: none;"><font color="${TEXT_COLOR}"><b>${login}</b></font></sub></a>\n`;
+            for (const user of contributors.values()) {
+              html += `  <a href="${user.html_url}" style="text-decoration: none; display: inline-block; margin: 10px; text-align: center;"><img src="${user.avatar_url}" width="65px" height="65px" style="border-radius: 50%; object-fit: cover;" alt="${user.login}"/><br /><sub style="text-decoration: none;"><font color="${TEXT_COLOR}"><b>${user.login}</b></font></sub></a>\n`;
             }
             html += '</div>\n';
 
