@@ -2,8 +2,8 @@ name: Update Org Contributors
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    - cron: '0 0 * * *' # Berjalan otomatis setiap hari jam 12 malam
+  workflow_dispatch: # Pemicu manual dari tab Actions
 
 jobs:
   contribs:
@@ -12,16 +12,68 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Aggregate Org Contributors
-        uses: repo-sync/github-contributors-list@v1
+      - name: Fetch and Update Contributors
+        uses: actions/github-script@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          account: 'CodeSync2026'
-          type: 'org'
+          script: |
+            const fs = require('fs');
+            const org = 'CodeSync2026';
 
-      - name: Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v4
+            // 1. Ambil seluruh repositori di organisasi
+            const repos = await github.paginate(github.rest.repos.listForOrg, { org });
+            const contributors = new Map();
+
+            // 2. Ambil seluruh kontributor dari tiap repositori
+            for (const repo of repos) {
+              try {
+                const list = await github.paginate(github.rest.repos.listContributors, {
+                  owner: org,
+                  repo: repo.name
+                });
+                for (const user of list) {
+                  if (user.type === 'User') {
+                    contributors.set(user.login, {
+                      login: user.login,
+                      avatar_url: user.avatar_url,
+                      html_url: user.html_url
+                    });
+                  }
+                }
+              } catch (e) {
+                console.log(`Skipping repo ${repo.name}: ${e.message}`);
+              }
+            }
+
+            // 3. Format menjadi tabel HTML
+            let html = '\n<table>\n  <tr>\n';
+            let count = 0;
+            for (const [login, user] of contributors) {
+              if (count > 0 && count % 6 === 0) html += '  </tr>\n  <tr>\n';
+              html += `    <td align="center"><a href="${user.html_url}"><img src="${user.avatar_url}" width="60px;" alt="${login}"/><br /><sub><b>${login}</b></sub></a></td>\n`;
+              count++;
+            }
+            html += '  </tr>\n</table>\n';
+
+            // 4. Masukkan ke dalam file README.md
+            const readmePath = 'README.md';
+            let content = fs.readFileSync(readmePath, 'utf8');
+            const startTag = '<!-- ALL-CONTRIBUTORS-LIST:START -->';
+            const endTag = '<!-- ALL-CONTRIBUTORS-LIST:END -->';
+
+            const regex = new RegExp(`${startTag}[\\s\\S]*?${endTag}`);
+            const replacement = `${startTag}${html}${endTag}`;
+
+            if (regex.test(content)) {
+              content = content.replace(regex, replacement);
+              fs.writeFileSync(readmePath, content);
+              console.log('README.md updated successfully.');
+            } else {
+              console.log('Tags placeholder not found in README.md');
+            }
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs: update organization contributors"
