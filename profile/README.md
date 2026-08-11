@@ -125,4 +125,13 @@ Total anggaran operasional proyek sebesar **Rp4.975.000**, yang dialokasikan sec
 ## 👥 Kontributor Organisasi
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/hicesse"><img src="https://avatars.githubusercontent.com/u/192774936?v=4" width="60px;" alt="hicesse"/><br /><sub><b>hicesse</b></sub></a></td>
+    <td align="center"><a href="https://github.com/widhi578"><img src="https://avatars.githubusercontent.com/u/217446727?v=4" width="60px;" alt="widhi578"/><br /><sub><b>widhi578</b></sub></a></td>
+    <td align="center"><a href="https://github.com/cannabisse"><img src="https://avatars.githubusercontent.com/u/281621980?v=4" width="60px;" alt="cannabisse"/><br /><sub><b>cannabisse</b></sub></a></td>
+    <td align="center"><a href="https://github.com/juansoetham"><img src="https://avatars.githubusercontent.com/u/243265395?v=4" width="60px;" alt="juansoetham"/><br /><sub><b>juansoetham</b></sub></a></td>
+    <td align="center"><a href="https://github.com/ikalvscode"><img src="https://avatars.githubusercontent.com/u/244137051?v=4" width="60px;" alt="ikalvscode"/><br /><sub><b>ikalvscode</b></sub></a></td>
+  </tr>
+</table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
