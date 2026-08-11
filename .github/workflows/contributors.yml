@@ -2,8 +2,8 @@ name: Update Org Contributors
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Berjalan otomatis setiap hari jam 12 malam
-  workflow_dispatch: # Pemicu manual dari tab Actions
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   contribs:
@@ -56,8 +56,8 @@ jobs:
             }
             html += '  </tr>\n</table>\n';
 
-            // 4. Masukkan ke dalam file README.md
-            const readmePath = 'README.md';
+            // 4. Masukkan ke dalam file profile/README.md
+            const readmePath = 'profile/README.md';
             let content = fs.readFileSync(readmePath, 'utf8');
             const startTag = '<!-- ALL-CONTRIBUTORS-LIST:START -->';
             const endTag = '<!-- ALL-CONTRIBUTORS-LIST:END -->';
@@ -68,9 +68,9 @@ jobs:
             if (regex.test(content)) {
               content = content.replace(regex, replacement);
               fs.writeFileSync(readmePath, content);
-              console.log('README.md updated successfully.');
+              console.log('profile/README.md updated successfully.');
             } else {
-              console.log('Tags placeholder not found in README.md');
+              console.log('Tags placeholder not found in profile/README.md');
             }
 
       - name: Commit and Push Changes
