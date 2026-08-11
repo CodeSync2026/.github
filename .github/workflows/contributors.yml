@@ -20,7 +20,7 @@ jobs:
           script: |
             const fs = require('fs');
             const org = 'CodeSync2026';
-            const TEXT_COLOR = '#DF6C4F'; // Warna kustom CodeSync (#DF6C4F)
+            const TEXT_COLOR = '#DF6C4F';
 
             // 1. Ambil seluruh repositori di organisasi
             const repos = await github.paginate(github.rest.repos.listForOrg, { org });
@@ -47,15 +47,12 @@ jobs:
               }
             }
 
-            // 3. Format tabel HTML (Tanpa Garis Bawah, Bold, Warna #DF6C4F)
-            let html = '\n<table border="0" style="border: none; border-collapse: collapse;">\n  <tr>\n';
-            let count = 0;
-            for (const [login, user] of contributors) {
-              if (count > 0 && count % 6 === 0) html += '  </tr>\n  <tr>\n';
-              html += `    <td align="center" style="border: none; padding: 10px;"><a href="${user.html_url}" style="text-decoration: none;"><img src="${user.avatar_url}" width="65px" height="65px" style="border-radius: 50%; object-fit: cover;" alt="${login}"/><br /><sub style="text-decoration: none;"><font color="${TEXT_COLOR}"><b>${login}</b></font></sub></a></td>\n`;
-              count++;
+            // 3. Format HTML Inline (Tanpa Elemen Tabel, Foto Bulat, Nama Bold #DF6C4F)
+            let html = '\n<div align="center">\n';
+            for (const [login, user] of contributors.values()) {
+              html += `  <a href="${user.html_url}" style="text-decoration: none; display: inline-block; margin: 10px; text-align: center;"><img src="${user.avatar_url}" width="65px" height="65px" style="border-radius: 50%; object-fit: cover;" alt="${login}"/><br /><sub style="text-decoration: none;"><font color="${TEXT_COLOR}"><b>${login}</b></font></sub></a>\n`;
             }
-            html += '  </tr>\n</table>\n';
+            html += '</div>\n';
 
             // 4. Masukkan ke dalam file profile/README.md
             const readmePath = 'profile/README.md';
@@ -79,4 +76,4 @@ jobs:
         with:
           commit_message: "docs: update organization contributors"
           commit_user_name: "CodeSync Bot"
-          commit_user_email: "hicesse31@gmail.com"
+          commit_user_email: "actions@github.com"
