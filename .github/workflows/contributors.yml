@@ -1,4 +1,4 @@
-name: Update Contributors
+name: Update Org Contributors
 
 on:
   schedule:
@@ -47,12 +47,24 @@ jobs:
               }
             }
 
-            // 3. Format HTML Inline (Foto Bulat, Nama Bold #DF6C4F)
-            let html = '\n<div align="center">\n';
+            // 3. Format Tabel HTML (Foto Bulat via wsrv.nl + Teks #DF6C4F)
+            let html = '\n<table>\n  <tr>\n';
+            let count = 0;
             for (const user of contributors.values()) {
-              html += `  <a href="${user.html_url}" style="text-decoration: none; display: inline-block; margin: 10px; text-align: center;"><img src="${user.avatar_url}" width="65px" height="65px" style="border-radius: 50%; object-fit: cover;" alt="${user.login}"/><br /><sub style="text-decoration: none;"><font color="${TEXT_COLOR}"><b>${user.login}</b></font></sub></a>\n`;
+              if (count > 0 && count % 6 === 0) html += '  </tr>\n  <tr>\n';
+              
+              // Proxy gambar untuk memotong foto menjadi bulat sempurna
+              const roundAvatar = `https://wsrv.nl/?url=${encodeURIComponent(user.avatar_url)}&mask=circle&w=65&h=65`;
+
+              html += `    <td align="center" width="100">\n`;
+              html += `      <a href="${user.html_url}">\n`;
+              html += `        <img src="${roundAvatar}" width="65" height="65" alt="${user.login}" /><br />\n`;
+              html += `        <sub><font color="${TEXT_COLOR}"><b>${user.login}</b></font></sub>\n`;
+              html += `      </a>\n`;
+              html += `    </td>\n`;
+              count++;
             }
-            html += '</div>\n';
+            html += '  </tr>\n</table>\n';
 
             // 4. Masukkan ke dalam file profile/README.md
             const readmePath = 'profile/README.md';
