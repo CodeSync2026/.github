@@ -134,18 +134,6 @@ Total anggaran operasional proyek sebesar **Rp4.975.000**, yang dialokasikan sec
       </a>
     </td>
     <td align="center" width="100">
-      <a href="https://github.com/widhi578">
-        <img src="https://wsrv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F217446727%3Fv%3D4&mask=circle&w=65&h=65" width="65" height="65" alt="widhi578" /><br />
-        <sub><font color="#DF6C4F"><b>widhi578</b></font></sub>
-      </a>
-    </td>
-    <td align="center" width="100">
-      <a href="https://github.com/cannabisse">
-        <img src="https://wsrv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F281621980%3Fv%3D4&mask=circle&w=65&h=65" width="65" height="65" alt="cannabisse" /><br />
-        <sub><font color="#DF6C4F"><b>cannabisse</b></font></sub>
-      </a>
-    </td>
-    <td align="center" width="100">
       <a href="https://github.com/juansoetham">
         <img src="https://wsrv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F243265395%3Fv%3D4&mask=circle&w=65&h=65" width="65" height="65" alt="juansoetham" /><br />
         <sub><font color="#DF6C4F"><b>juansoetham</b></font></sub>
